@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" href="icon.svg" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <title>PowerSync iPhone spike</title>
+    <style>body{padding:env(safe-area-inset-top) 16px 32px;color:#111;background:#fff;margin:0;font:16px -apple-system,system-ui,sans-serif}h1{font-size:20px}h2{margin-top:24px;font-size:16px}button,input[type=text],input[type=email],input[type=password]{font:inherit;min-height:44px}button{background:#fff7ed;border:1px solid #b45309;border-radius:10px;padding:0 16px}.row{flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0;display:flex}input[type=text],input[type=email],input[type=password]{border:1px solid #999;border-radius:10px;flex:1;min-width:0;padding:0 10px}dl{grid-template-columns:auto 1fr;gap:4px 12px;margin:0;display:grid}dt{color:#555}dd{font-variant-numeric:tabular-nums;word-break:break-all;margin:0}.bad{color:#b91c1c;font-weight:600}.ok{color:#15803d;font-weight:600}ul{padding-left:18px}li{margin:6px 0}img{border-radius:6px;max-width:120px;display:block}pre{white-space:pre-wrap;background:#f4f4f5;border-radius:8px;padding:8px;font-size:12px}</style>
+    <script type="module" crossorigin src="/powersync-iphone-spike/assets/index-Bad9dT_k.js"></script>
+  <link rel="manifest" href="/powersync-iphone-spike/manifest.webmanifest"></head>
+  <body>
+    <h1>PowerSync iPhone spike</h1>
+    <dl id="status"></dl>
+    <h2>Unexpected reloads (issue #1081)</h2>
+    <p id="reloadSummary"></p>
+    <ul id="reloads"></ul>
+    <h2>Notes</h2>
+    <div class="row"><input id="noteText" type="text" placeholder="Note text" /><button id="addNote" disabled>Add note</button></div>
+    <div class="row"><label><button id="pickPhoto" type="button" disabled>Add note with photo</button></label><input id="photo" type="file" accept="image/*" hidden /></div>
+    <ul id="notes"></ul>
+    <h2 id="authHeading">Sync sign-in</h2>
+    <div id="auth"></div>
+    <h2>Report</h2>
+    <div class="row"><button id="copyReport">Copy report</button><button id="clearLog">Clear reload log</button></div>
+    <pre id="log"></pre>
+  </body>
+</html>
