@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>PROTOTYPE: interrupted recording</title>
+    <style>body{padding:env(safe-area-inset-top) 16px 40px;color:#111;background:#fff;margin:0;font:16px -apple-system,system-ui,sans-serif}h1{font-size:18px}h2{margin:20px 0 6px;font-size:15px}.banner{background:#fef3c7;border-radius:8px;padding:8px;font-size:13px}button,select{font:inherit;background:#fff7ed;border:1px solid #b45309;border-radius:12px;min-height:48px;padding:0 14px}button.big{flex:1;min-height:64px;font-size:18px}button:disabled{opacity:.4}.row{flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0;display:flex}#state{font-size:22px;font-weight:700}.interrupted{color:#b91c1c}.recording{color:#15803d}table{border-collapse:collapse;width:100%;font-size:13px}td,th{text-align:left;border-bottom:1px solid #eee;padding:4px}pre{white-space:pre-wrap;background:#f4f4f5;border-radius:8px;max-height:260px;padding:8px;font-size:11px;overflow:auto}</style>
+    <script type="module" crossorigin src="/powersync-iphone-spike/assets/record-DYeK9S-M.js"></script>
+    <link rel="modulepreload" crossorigin href="/powersync-iphone-spike/assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="manifest" href="/powersync-iphone-spike/manifest.webmanifest"></head>
+  <body>
+    <p class="banner">PROTOTYPE for “How does a voice inspection survive interruptions?”. Throwaway. <a href="./">← back</a></p>
+    <h1>Interrupted recording</h1>
+    <div id="state">…</div>
+    <div id="sub"></div>
+    <div class="row">
+      <button class="big" id="start">● Record</button>
+      <button class="big" id="resume" hidden>↻ Resume</button>
+      <button class="big" id="finish" disabled>■ Finish</button>
+    </div>
+    <div class="row">
+      <label>Chunk every <select id="slice"><option>1</option><option selected>5</option><option>10</option></select> s</label>
+      <button id="playAll">▶ Play all</button>
+      <button id="wav">Join → WAV</button>
+      <button id="clear">Clear</button>
+    </div>
+    <audio id="player" controls style="width:100%"></audio>
+    <h2>Segments (saved on this phone)</h2>
+    <table><thead><tr><th>#</th><th>chunks</th><th>KB</th><th>length</th><th>ended by</th><th></th></tr></thead><tbody id="segs"></tbody></table>
+    <h2>Event log</h2>
+    <div class="row"><button id="copy">Copy report</button></div>
+    <pre id="log"></pre>
+  </body>
+</html>
